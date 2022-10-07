@@ -2,11 +2,12 @@
 
 ## Como instalar el proyecto
 
-### primero instalar git
+primero instalar git
 
-despues clonar repo
+despues clonar repo en
 
 ```
+cd C:/xampp/htdocs
 git clone https://github.com/gabrieloyarzo/noticias_ulagos/
 ```
 

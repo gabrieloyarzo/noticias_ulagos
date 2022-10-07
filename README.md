@@ -7,7 +7,7 @@ primero instalar git
 despues clonar repo en
 
 ```
-cd C:/xampp/htdocs
+cd C:\xampp\htdocs
 git clone https://github.com/gabrieloyarzo/noticias_ulagos/
 ```
 

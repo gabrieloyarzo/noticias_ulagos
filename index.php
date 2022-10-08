@@ -15,6 +15,6 @@
     <script defer src="./scripts.js"></script>
 </head>
 <body>
-    
+    <h1>hola mundo</h1>
 </body>
 </html>

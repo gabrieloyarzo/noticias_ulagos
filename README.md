@@ -27,4 +27,14 @@ git commit -m 'mensaje'
 git push origin <nombre rama>
 ```
 
+Para ejecutar el proyecto hay que activar Apache y MySQL en Xampp
+
+Despues colocar en el navegador 
+
+http://localhost/noticias_ulagos/index.php
+
+Para subir la base de datos se hace en 
+
+http://localhost/phpmyadmin/
+
 Proyecto Web - 6to semestre - Ingeniería Civil en Informática - Universidad de Los Lagos

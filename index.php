@@ -9,8 +9,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Noticias ULAGOS</title>
+    <link rel="stylesheet" href="style.css">
     <script defer src="./scripts.js"></script>
 </head>
 <body>
@@ -23,7 +23,7 @@
         <img class="header__logo" src="" alt="logo ulagos">
     </header>
 
-    <a href="noticia.php  " class="noticia">
+    <a href="noticia.php" class="noticia">
 
         <article class="noticia__general">
             <img class="noticia__foto" src="" alt="foto">

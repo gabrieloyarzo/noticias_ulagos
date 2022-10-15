@@ -1,7 +1,13 @@
-h1 {
-    background-color: #0def95;
+* {
+    box-sizing: border-box;
 }
 
 .header {
     display: flex;
+    width: 100%;
 }
+
+.header__titulo {
+    background-color: red;
+}
+

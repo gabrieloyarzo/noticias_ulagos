@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.inicio_sesion {
+    background-color: rgb(0, 102, 255);
+    width: 60%;
+    height: 60%;
+    padding:10px 20px;
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+}
+
+.usuario,
+.correo,
+.contrasena {
+    font-size: 1em;
+    padding: 10px 20px;
+}
+
+.inicio,
+.registrarse {
+    padding: 20px;
+    margin: 0 20px;
+    font-size: 1em;
+}

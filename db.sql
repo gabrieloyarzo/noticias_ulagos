@@ -15,7 +15,7 @@ CREATE TABLE categoria (
 
 CREATE TABLE noticia (
     id INT NOT NULL AUTO_INCREMENT,
-    titulo,
+    titulo TEXT,
     fecha DATE,
     descripcion TEXT,
     imagen VARCHAR(20),

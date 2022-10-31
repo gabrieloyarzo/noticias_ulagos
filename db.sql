@@ -6,7 +6,7 @@ CREATE TABLE usuario (
 );
 
 CREATE TABLE categoria (
-    nombre PRIMARY KEY,
+    nombre VARCHAR(20) PRIMARY KEY,
     color VARCHAR(10)
 );
 

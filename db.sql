@@ -15,13 +15,13 @@ CREATE TABLE categoria (
 
 CREATE TABLE noticia (
     id INT NOT NULL AUTO_INCREMENT,
-    titulo TEXT,
+    titulo VARCHAR(100),
     fecha DATE,
     descripcion TEXT,
-    imagen VARCHAR(20),
     correo VARCHAR(20),
     nombrec VARCHAR(20),
     PRIMARY KEY(id)
     FOREIGN KEY (correo) REFERENCES usuario (correo) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (nombrec) REFERENCES categoria (nombre) ON DELETE CASCADE ON UPDATE CASCADE 
+    FOREIGN KEY (nombrec) REFERENCES categoria (nombre) ON DELETE CASCADE ON UPDATE CASCADE, 
+    PRIMARY KEY (id)
 );

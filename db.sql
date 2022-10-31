@@ -20,7 +20,6 @@ CREATE TABLE noticia (
     descripcion TEXT,
     correo VARCHAR(20),
     nombrec VARCHAR(20),
-    PRIMARY KEY(id)
     FOREIGN KEY (correo) REFERENCES usuario (correo) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (nombrec) REFERENCES categoria (nombre) ON DELETE CASCADE ON UPDATE CASCADE, 
     PRIMARY KEY (id)

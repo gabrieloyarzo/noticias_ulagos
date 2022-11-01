@@ -13,20 +13,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias ULAGOS</title>
     <link rel="stylesheet" href="./styles/index.css">
-    <script defer src="./scripts.js"></script>
+    <script defer src="./src/scripts.js"></script>
 </head>
 <body>
-
+    
     <header class="header">
-        <h1 class="header__titulo">Noticias ULAGOS</h1>
+        <h1 id="titulo" class="header__titulo">Noticias ULAGOS</h1>
         <a href="#" class="header__home">Inicio</a>
         <a href="#" class="header__login">
             <img class="header__foto" src="" alt="login">
         </a>
         <img class="header__logo" src="" alt="logo Ulagos">
     </header>
-
-    <nav class="buscar">
+    <nav id="buscar" class="buscar">
         <textarea name="titulo" id="buscar__titulo" cols="30" rows="1"></textarea>
         <input id="buscar__fecha--menor" type="date">
         <input id="bsucar__fecha--mayor" type="date">
@@ -40,7 +39,7 @@
             <option value="fecha">Fecha</option>
         </select>
     </nav>
-
+    
     <article class="noticia">
         <aside class="noticia__aside">
             <img src="" alt="foto">

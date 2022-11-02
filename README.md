@@ -21,9 +21,7 @@ para agregar un cambio
 
 ```
 git add <nombre archivos>
-
 git commit -m 'mensaje'
-
 git push origin <nombre rama>
 ```
 

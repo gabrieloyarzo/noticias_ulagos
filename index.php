@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,14 +19,21 @@
         <img class="header__logo" src="" alt="logo Ulagos">
     </header>
     <nav id="buscar" class="buscar">
-        <textarea name="titulo" id="buscar__titulo" cols="30" rows="1"></textarea>
+        <textarea 
+        name="titulo" 
+        id="buscar__titulo" 
+        cols="30" 
+        rows="1"></textarea>
         <input id="buscar__fecha--menor" type="date">
         <input id="buscar__fecha--mayor" type="date">
         <select name="categoria" id="buscar__categoria">
             <option value="rellenar">rellenar con la base de datos</option>
             <option value="rellenar">rellenar con la base de datos</option>
         </select>
-        <select onClick="cambio_busqueda($('buscar__tipos').options.selectedIndex)" name="tipos" id="buscar__tipos">
+        <select 
+        onClick="cambio_busqueda($('buscar__tipos').options.selectedIndex)"
+        name="tipos" 
+        id="buscar__tipos">
             <option value="categoria">Categoria</option>
             <option value="titulo">Titulos</option>
             <option value="fecha">Fecha</option>

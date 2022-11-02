@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias ULAGOS</title>
-    <link rel="stylesheet" href="./styles/subir_noticia.css">
+    <link rel="stylesheet" href="../styles/subir_noticia.css">
 </head>
 <body>
     <form class="noticia">

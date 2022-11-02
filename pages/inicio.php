@@ -5,12 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias ULAGOS</title>
-    <link rel="stylesheet" href="../styles/registrarse.css
-    ">
+    <link rel="stylesheet" href="../styles/inicio.css">
 </head>
 <body>
     <form class="inicio_sesion">
-        <input class="usuario" type="text" placeholder="Nombre de Usuario">
         <input class="correo" type="email" placeholder="Correo">
         <input class="contrasena" type="password" placeholder="Contraseña">
         <div>

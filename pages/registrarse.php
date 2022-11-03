@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias ULAGOS</title>
-    <link rel="stylesheet" href="../styles/registrarse.css
-    ">
+    <link rel="stylesheet" href="../styles/registrarse.css">
+    <script defer src="../src/variables.js"></script>
 </head>
 <body>
     <form class="inicio_sesion" method="post">
@@ -15,8 +15,8 @@
         <input class="correo" name="correo" type="email" placeholder="Correo">
         <input class="contrasena" name="contra" type="password" placeholder="Contraseña">
         <div>
-            <input class="inicio" type="submit" value="Iniciar Sesión">
-            <input class="registrarse" name="sendR" type="submit" value="Registrarse">
+            <a class="inicio" href="./inicio.php">Iniciar Sesion</a>
+            <input class="registrarse" name="send_registro" type="submit" value="Registrarse">
         </div>
     </form>
     

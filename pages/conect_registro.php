@@ -4,7 +4,7 @@ $conex = mysqli_connect("localhost","root","","noticias_ulagos");
 
 
 
-if (isset($_POST['sendR'])){    
+if (isset($_POST['send_registro'])){    
 
 $nombre = strval(trim($_POST['nombre']));
 $apellido = strval(trim($_POST['apellido']));
@@ -26,6 +26,3 @@ if (strval($nombre) >=1 && strval($apellido) >=1 && strval($correo) >=1 && strva
 }
 }
 ?>
-
-
-

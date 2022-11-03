@@ -3,13 +3,14 @@
 }
 
 :root {
-    --primary: #f0d78c;
+    --primary: #dfba4d;
     --secondary: #fcfafa;
     --tertiary: #64c4ed;
     --quaternary: #4f81c7;
 }
 
 a {
+    text-decoration: none;
     color: black;
 }
 

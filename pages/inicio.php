@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="../styles/inicio.css">
 </head>
 <body>
-    <form class="inicio_sesion">
-        <input class="correo" type="email" placeholder="Correo">
-        <input class="contrasena" type="password" placeholder="Contraseña">
+    <form class="inicio_sesion" method="post">
+        <input class="correo" name="correo" type="email" placeholder="Correo">
+        <input class="contrasena" name="contra" type="password" placeholder="Contraseña">
         <div>
             <input class="inicio" type="submit" value="Iniciar Sesión">
-            <input class="registrarse" type="submit" value="Registrarse">
+            <a class="registrarse" href="./registrarse.php">Registrarse</a>
         </div>
     </form>
 </body>

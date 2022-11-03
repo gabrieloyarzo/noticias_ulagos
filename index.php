@@ -1,6 +1,6 @@
 <?php
     $connection = mysqli_connect('localhost', 'root', '', 'noticias_ulagos');
-    $result = mysqli_query($connection, "SELECT * from noticia");
+    $result = mysqli_query($connection, "SELECT u.nombre as nombre, u.apellido as apellido, u.correo as correo, c.nombre as categoria, c.color as color, n.titulo as titulo, n.fecha as fecha, n.descripcion as info from noticia n, categoria c, usuario u where c.nombre = n.nombrec and n.correo = u.correo");
 
     $conex = mysqli_connect("localhost","root","","noticias_ulagos");
     mysqli_select_db($conex,"noticias_ulagos");
@@ -43,26 +43,29 @@
             <?php  } ?>
         </select>
         <select onClick="cambio_busqueda($('buscar__tipos').options.selectedIndex)" name="tipos" id="buscar__tipos">
-            <option value="categoria">Categoria</option>
             <option value="titulo">Titulo</option>
+            <option value="categoria">Categoria</option>
             <option value="fecha">Fecha</option>
         </select>
     </nav>
     
     <?php while ($fila=mysqli_fetch_array($result)) { ?>
-        
+        <!--<?php echo $fila['titulo']?>-->
         <article class="noticia">
             <aside class="noticia__aside">
-                <h3 class="noticia__autor"><?php echo $fila['titulo']?></h3>
+                <h3 class="noticia__nombre"><?php echo $fila['nombre']?></h3>
+                <h3 class="noticia__apellido"><?php echo $fila['apellido']?></h3>
+                <h3 class="noticia__correo"><?php echo $fila['correo']?></h3>
             </aside>
             <main class="noticia__main">
                 <header class="noticia__header">
                     <h2 class="noticia__titulo"><?php echo $fila['titulo']?></h2>
                     <p class="noticia__fecha"><?php echo $fila['fecha']?></p>
+                    <p class="noticia__categoria" style="background-color: <?php echo $fila['color']?>"><?php echo $fila['categoria']?></p>
                 </header>
                 <footer class="noticia__footer">
 
-                    <p class="noticia__texto"><?php echo $fila['descripcion']?></p>
+                    <p class="noticia__texto"><?php echo $fila['info']?></p>
                     <button class="noticia__ir">Ir a la noticia</button>
                 </footer>
             </main>

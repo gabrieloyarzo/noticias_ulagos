@@ -42,7 +42,7 @@
                 <option style="background-color: <?php echo $fila[1] ?>" value="<?php echo $fila[0] ?>"><?php echo $fila[0] ?></option>
             <?php  } ?>
         </select>
-        <select name="tipos" id="buscar__tipos">
+        <select onClick="cambio_busqueda($('buscar__tipos').options.selectedIndex)" name="tipos" id="buscar__tipos">
             <option value="categoria">Categoria</option>
             <option value="titulo">Titulo</option>
             <option value="fecha">Fecha</option>
@@ -61,7 +61,7 @@
                     <p class="noticia__fecha"><?php echo $fila['fecha']?></p>
                 </header>
                 <footer class="noticia__footer">
-                    
+
                     <p class="noticia__texto"><?php echo $fila['descripcion']?></p>
                     <button class="noticia__ir">Ir a la noticia</button>
                 </footer>

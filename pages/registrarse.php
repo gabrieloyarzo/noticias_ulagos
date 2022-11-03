@@ -9,14 +9,19 @@
     ">
 </head>
 <body>
-    <form class="inicio_sesion">
-        <input class="usuario" type="text" placeholder="Nombre de Usuario">
-        <input class="correo" type="email" placeholder="Correo">
-        <input class="contrasena" type="password" placeholder="Contraseña">
+    <form class="inicio_sesion" method="post">
+        <input class="usuario" name="nombre" type="text" placeholder="Nombre">
+        <input class="usuario" name="apellido" type="text" placeholder="Apellido">
+        <input class="correo" name="correo" type="email" placeholder="Correo">
+        <input class="contrasena" name="contra" type="password" placeholder="Contraseña">
         <div>
             <input class="inicio" type="submit" value="Iniciar Sesión">
-            <input class="registrarse" type="submit" value="Registrarse">
+            <input class="registrarse" name="sendR" type="submit" value="Registrarse">
         </div>
     </form>
+    
+    <?php include('conect_registro.php')?>
+
+
 </body>
 </html>

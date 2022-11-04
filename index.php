@@ -34,7 +34,7 @@
     </header>
     
     <nav class="buscar">
-        <textarea name="titulo" id="buscar__titulo" cols="30" rows="1"></textarea>
+        <input name="titulo" id="buscar__titulo" cols="30" rows="1"></input>
         <input id="buscar__fecha--menor" type="date">
         <input id="buscar__fecha--mayor" type="date">
         <select name="categoria" id="buscar__categoria">
@@ -45,7 +45,6 @@
     </nav>
     
     <?php while ($fila=mysqli_fetch_array($result)) { ?>
-        <!--<?php echo $fila['titulo']?>-->
         <article class="noticia">
             <aside class="noticia__aside">
                 <h3 class="noticia__nombre"><?php echo $fila['nombre']?></h3>

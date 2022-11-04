@@ -9,6 +9,19 @@
     <script defer src="../src/variables.js"></script>
 </head>
 <body>
+<header class="header">
+    <a href="../index.php" class="header__home">
+        <h1 class="header__titulo">Noticias ULAGOS</h1>
+    </a>
+    <a href="./registrarse.php" class="header__login">
+        <img class="header__person" src="../img/person.png" alt="login">
+    </a>
+    <a href="./subir_noticia.php" class="header__noticia">
+        <img class="header__add" src="../img/add_cicle.png" alt="Subir Noticia">
+    </a>
+    <img class="header__logo" src="" alt="logo Ulagos">
+</header>
+
     <form class="inicio_sesion" method="post">
         <input class="usuario" name="nombre" type="text" placeholder="Nombre">
         <input class="usuario" name="apellido" type="text" placeholder="Apellido">

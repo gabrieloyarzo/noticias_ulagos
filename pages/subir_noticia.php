@@ -19,6 +19,18 @@ $result = mysqli_query($conex,$date);
     <link rel="stylesheet" href="../styles/subir_noticia.css">
 </head>
 <body>
+<header class="header">
+    <a href="../index.php" class="header__home">
+        <h1 class="header__titulo">Noticias ULAGOS</h1>
+    </a>
+    <a href="./registrarse.php" class="header__login">
+        <img class="header__person" src="../img/person.png" alt="login">
+    </a>
+    <a href="./subir_noticia.php" class="header__noticia">
+        <img class="header__add" src="../img/add_cicle.png" alt="Subir Noticia">
+    </a>
+    <img class="header__logo" src="" alt="logo Ulagos">
+</header>
     <form class="noticia" method="POST">
         <input required class="noticia__titulo" name="titleN" type="text" placeholder="Titulo de la Noticia">
         <input required type="text" name="contenido" placeholder="Información de la Noticia" class="noticia__info">

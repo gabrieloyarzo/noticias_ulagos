@@ -1,6 +1,6 @@
 <?php
     $connection = mysqli_connect('localhost', 'root', '', 'noticias_ulagos');
-    $result = mysqli_query($connection, "SELECT u.nombre as nombre, u.apellido as apellido, u.correo as correo, c.nombre as categoria, c.color as color, n.titulo as titulo, n.fecha as fecha, n.descripcion as info from noticia n, categoria c, usuario u where c.nombre = n.nombrec and n.correo = u.correo");
+    $result = mysqli_query($connection, "SELECT n.id as id, u.nombre as nombre, u.apellido as apellido, u.correo as correo, c.nombre as categoria, c.color as color, n.titulo as titulo, n.fecha as fecha, n.descripcion as info from noticia n, categoria c, usuario u where c.nombre = n.nombrec and n.correo = u.correo");
 
     $conex = mysqli_connect("localhost","root","","noticias_ulagos");
     mysqli_select_db($conex,"noticias_ulagos");
@@ -21,17 +21,18 @@
 </head>
 <body>
     
-    <header class="header">
+<header class="header">
+    <a href="./index.php" class="header__home">
         <h1 class="header__titulo">Noticias ULAGOS</h1>
-        <a href="./index.php" class="header__home">Inicio</a>
-        <a href="./pages/inicio.php" class="header__login">
-            <img class="header__person" src="./img/person.png" alt="login">
-        </a>
-        <a href="./pages/subir_noticia.php" class="header__noticia">
-            <img class="header__add" src="./img/add_cicle.png" alt="Subir Noticia">
-        </a>
-        <img class="header__logo" src="" alt="logo Ulagos">
-    </header>
+    </a>
+    <a href="./pages/registrarse.php" class="header__login">
+        <img class="header__person" src="./img/person.png" alt="login">
+    </a>
+    <a href="./pages/subir_noticia.php" class="header__noticia">
+        <img class="header__add" src="./img/add_cicle.png" alt="Subir Noticia">
+    </a>
+    <img class="header__logo" src="" alt="logo Ulagos">
+</header>
     
     <nav class="buscar">
         <input name="titulo" id="buscar__titulo" cols="30" rows="1"></input>
@@ -45,7 +46,7 @@
     </nav>
     
     <?php while ($fila=mysqli_fetch_array($result)) { ?>
-        <article class="noticia">
+        <article id="<?php echo $fila['id'] ?>" class="noticia">
             <aside class="noticia__aside">
                 <h3 class="noticia__nombre"><?php echo $fila['nombre']?></h3>
                 <h3 class="noticia__apellido"><?php echo $fila['apellido']?></h3>
@@ -60,9 +61,9 @@
                 <footer class="noticia__footer">
 
                     <p class="noticia__texto"><?php echo $fila['info']?></p>
-                    <button class="noticia__ir">Ir a la noticia</button>
                 </footer>
             </main>
+            <button class="noticia__ir">Ir a la noticia</button>
         </article> 
         <?php } ?>
         

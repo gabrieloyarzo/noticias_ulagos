@@ -21,7 +21,7 @@ body {
 }
 
 .header {
-    background-color: var(--quaternary);
+    background-color: #4f81c7;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -50,6 +50,7 @@ body {
 }
 
 .noticia__header {
+    background-color: red;
     display: flex;
     justify-content: space-around;
 }

@@ -36,7 +36,9 @@
     
     <nav class="buscar">
         <input name="titulo" id="buscar__titulo" cols="30" rows="1"></input>
+        <p>desde:</p>
         <input id="buscar__fecha--menor" type="date">
+        <p>hasta:</p>
         <input id="buscar__fecha--mayor" type="date">
         <select name="categoria" id="buscar__categoria">
             <?php while ($fila=mysqli_fetch_array($resultado)){  ?>

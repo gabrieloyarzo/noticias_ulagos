@@ -42,11 +42,6 @@
                 <option style="background-color: <?php echo $fila[1] ?>" value="<?php echo $fila[0] ?>"><?php echo $fila[0] ?></option>
             <?php  } ?>
         </select>
-        <select onClick="cambio_busqueda($('buscar__tipos').options.selectedIndex)" name="tipos" id="buscar__tipos">
-            <option value="titulo">Titulo</option>
-            <option value="categoria">Categoria</option>
-            <option value="fecha">Fecha</option>
-        </select>
     </nav>
     
     <?php while ($fila=mysqli_fetch_array($result)) { ?>

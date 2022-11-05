@@ -19,21 +19,20 @@
     <a href="./subir_noticia.php" class="header__noticia">
         <img class="header__add" src="../img/add_cicle.png" alt="Subir Noticia">
     </a>
-    <img class="header__logo" src="" alt="logo Ulagos">
+    <img class="header__logo" witdh="50" heigth="50" src="../img/logo-universidad-de-los-lagos.webp" alt="logo Ulagos">
 </header>
-
     <form class="inicio_sesion" method="post">
         <input class="usuario" name="nombre" type="text" placeholder="Nombre">
         <input class="usuario" name="apellido" type="text" placeholder="Apellido">
         <input class="correo" name="correo" type="email" placeholder="Correo">
         <input class="contrasena" name="contra" type="password" placeholder="Contraseña">
         <div>
-            <a class="inicio" href="./inicio.php">Iniciar Sesion</a>
             <input class="registrarse" name="send_registro" type="submit" value="Registrarse">
         </div>
     </form>
     
-    <?php include('conect_registro.php')?>
+
+    <?php include('../src/conect_registro.php')?>
 
 
 </body>

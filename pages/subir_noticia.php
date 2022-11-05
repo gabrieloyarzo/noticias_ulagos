@@ -29,7 +29,7 @@ $result = mysqli_query($conex,$date);
     <a href="./subir_noticia.php" class="header__noticia">
         <img class="header__add" src="../img/add_cicle.png" alt="Subir Noticia">
     </a>
-    <img class="header__logo" src="" alt="logo Ulagos">
+    <img class="header__logo" witdh="50" heigth="50" src="../img/logo-universidad-de-los-lagos.webp" alt="logo Ulagos">
 </header>
     <form class="noticia" method="POST">
         <input required class="noticia__titulo" name="titleN" type="text" placeholder="Titulo de la Noticia">
@@ -49,6 +49,7 @@ $result = mysqli_query($conex,$date);
         <input placeholder="contrasena" type="password" name="contra" id="noticia__contra">
         <input type="submit" name="send_noticia" class="noticia__enviar" value="Subir Noticia">
     </form>
-    <?php include('conect_noticia.php'); ?>
+    <?php include('../src/conect_noticia.php'); ?>
+
 </body>
 </html>

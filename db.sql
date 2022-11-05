@@ -24,3 +24,8 @@ CREATE TABLE noticia (
     FOREIGN KEY (nombrec) REFERENCES categoria (nombre) ON DELETE CASCADE ON UPDATE CASCADE, 
     PRIMARY KEY (id)
 );
+
+INSERT into categoria values
+('festividades','#dfba4d'),
+('deportes','#fcfafa'),
+('ceremonias','#64c4ed');

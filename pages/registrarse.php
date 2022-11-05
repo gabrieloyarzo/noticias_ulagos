@@ -10,16 +10,16 @@
 </head>
 <body>
 <header class="header">
+    <img class="header__logo" witdh="50" heigth="50" src="../img/logo-universidad-de-los-lagos.webp" alt="logo Ulagos">
     <a href="../index.php" class="header__home">
-        <h1 class="header__titulo">Noticias ULAGOS</h1>
-    </a>
-    <a href="./registrarse.php" class="header__login">
-        <img class="header__person" src="../img/person.png" alt="login">
+    <img class="header__titulo" src="../img/noticias-ulagos.jpeg" alt="Noticias ULagos">
     </a>
     <a href="./subir_noticia.php" class="header__noticia">
         <img class="header__add" src="../img/add_cicle.png" alt="Subir Noticia">
     </a>
-    <img class="header__logo" witdh="50" heigth="50" src="../img/logo-universidad-de-los-lagos.webp" alt="logo Ulagos">
+    <a href="./registrarse.php" class="header__login">
+        <img class="header__person" src="../img/person.png" alt="login">
+    </a>
 </header>
     <form class="inicio_sesion" method="post">
         <input class="usuario" name="nombre" type="text" placeholder="Nombre">

@@ -1,7 +1,7 @@
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script language= javascript type= text/javascript>
-function error(){
+function errorDatos(){
  swal({
     title: 'Error',
     text:'El correo ingresado ya se encuentra en uso',
@@ -14,6 +14,14 @@ swal({
    icon:'success'
 })
 }
+
+function entradasInvalidas(){
+ swal({
+    title: 'Error',
+    text:'Los datos contienen caracteres prohibidos o estan en blanco!',
+    icon:'error'
+})
+}
 </script> 
 
 
@@ -21,15 +29,15 @@ swal({
 
 #Conexion a la base de datos
 $conex = mysqli_connect("localhost","root","","noticias_ulagos");
-
+include('sanitizar.php');
 
 
 if (isset($_POST['send_registro'])){    
 
-$nombre = strval(trim($_POST['nombre']));
-$apellido = strval(trim($_POST['apellido']));
-$correo = strval(trim($_POST['correo']));
-$password=strval(trim($_POST['contra']));
+$nombre = Limpieza(trim($_POST['nombre']));
+$apellido = Limpieza(trim($_POST['apellido']));
+$correo = Limpieza(trim($_POST['correo']));
+$password= Limpieza(trim($_POST['contra']));
 
 if (strval($nombre) >=1 && strval($apellido) >=1 && strval($correo) >=1 && strval($password) >=1 ){
     $dates = "INSERT INTO usuario (correo,nombre,apellido,contrasena) values('$correo','$nombre','$apellido','$password')";
@@ -42,11 +50,17 @@ if (strval($nombre) >=1 && strval($apellido) >=1 && strval($correo) >=1 && strva
     } catch(Exception $e) {
         
    echo '<script>';
-   echo 'error()';
+   echo 'errorDatos()';
    echo '</script>';
    
 
     }
-} 
+} else {
+
+    echo '<script>';
+    echo 'entradasInvalidas()';
+    echo '</script>';
+
+}
 }
 ?>

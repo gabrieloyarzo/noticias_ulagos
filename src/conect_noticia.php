@@ -3,7 +3,7 @@
 function datosInvalidos(){
  swal({
     title: 'Error',
-    text:'Credenciales incorrectas!',
+    text:'Datos incorrectos!',
     icon:'error'
 })
 }
@@ -19,16 +19,17 @@ swal({
 #Conexion a la base de datos
 $conexion = mysqli_connect("localhost","root","","noticias_ulagos");
 mysqli_select_db($conexion,"noticias_ulagos");
-
+include('sanitizar.php');
 
 
 if (isset($_POST['send_noticia'])){     
-    $titulo    = strval(trim($_POST['titleN']));
-    $contenido = strval(trim($_POST['contenido']));
-    $fecha     = strval(trim($_POST['date']));
-    $categoria = strval(trim($_POST['tipos']));
-    $correo    = strval(trim($_POST['correo']));
-    $contra    = strval(trim($_POST['contra']));
+    #$titulo    = strval(trim($_POST['titleN']));
+    $titulo    = Limpieza(trim($_POST['titleN']));
+    $contenido = Limpieza(trim($_POST['contenido']));
+    $fecha     = Limpieza(trim($_POST['date']));
+    $categoria = Limpieza(trim($_POST['tipos']));
+    $correo    = Limpieza(trim($_POST['correo']));
+    $contra    = Limpieza(trim($_POST['contra']));
     
     $datos = "SELECT * FROM usuario WHERE correo = '$correo' AND contrasena = '$contra'";
     $resultado = mysqli_fetch_array(mysqli_query($conexion,$datos));

@@ -20,7 +20,6 @@ $result = mysqli_query($conex,$date);
 </head>
 <body>
 <header class="header">
-    <img class="header__logo" witdh="50" heigth="50" src="../img/logo-universidad-de-los-lagos.webp" alt="logo Ulagos">
     <a href="../index.php" class="header__home">
     <img class="header__titulo" src="../img/noticias-ulagos.jpeg" alt="Noticias ULagos">
     </a>

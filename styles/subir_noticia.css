@@ -25,9 +25,9 @@ a {
     justify-content: space-around;
     width: 100%;
 }
-.header__logo {
-    max-width: 50px;
-    max-height: 50px;
+.header__titulo {
+    height: 50px;
+    width: 250px;
 }
 
 .noticia {

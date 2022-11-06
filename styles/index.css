@@ -29,13 +29,9 @@ a {
     justify-content: space-around;
 }
 
-.header__home {
-    height: 100%;
-}
-
-.header__logo {
-    max-width: 50px;
-    max-height: 50px;
+.header__titulo {
+    height: 50px;
+    width: 250px;
 }
 
 .buscar {
@@ -45,6 +41,19 @@ a {
     justify-content: space-evenly;
     padding: 0 20px;
 }
+
+@media (max-width: 600px) {
+    .buscar {
+      flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .noticia {
+        flex-direction: column;
+    }
+    .noticia__fecha {
+        margin: 0 10px;
+    }
+  }
 
 .noticia {
     margin: 10px;
@@ -71,9 +80,14 @@ a {
 
 .noticia__header {
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
     width: 100%;
     height: 100%;
+}
+
+.noticia__titulo {
+    text-transform: uppercase;
 }
 
 .noticia__footer {

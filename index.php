@@ -34,9 +34,10 @@
     <a href="./pages/subir_noticia.php" class="header__noticia">
         <img class="header__add" src="./img/add_cicle.png" alt="Subir Noticia">
     </a>
-    <a href="./pages/registrarse.php" class="header__login">
+   <a href="./pages/registrarse.php" class="header__login">
         <img class="header__person" src="./img/person.png" alt="login">
-    </a>
+    </a> 
+
 </header>
     
     <nav class="buscar">

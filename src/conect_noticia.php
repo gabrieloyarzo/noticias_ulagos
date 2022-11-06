@@ -1,3 +1,4 @@
+
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script language= javascript type= text/javascript>
 function datosInvalidos(){
@@ -15,6 +16,7 @@ swal({
 }
 </script> 
 
+
 <?php
 #Conexion a la base de datos
 $conexion = mysqli_connect("localhost","root","","noticias_ulagos");
@@ -23,6 +25,7 @@ include('sanitizar.php');
 
 
 if (isset($_POST['send_noticia'])){     
+
     #$titulo    = strval(trim($_POST['titleN']));
     $titulo    = Limpieza(trim($_POST['titleN']));
     $contenido = Limpieza(trim($_POST['contenido']));
@@ -33,6 +36,7 @@ if (isset($_POST['send_noticia'])){
     
     $datos = "SELECT * FROM usuario WHERE correo = '$correo' AND contrasena = '$contra'";
     $resultado = mysqli_fetch_array(mysqli_query($conexion,$datos));
+
     
 
     if (strval($titulo) >=1 && strval($contenido) >=1 && strval($categoria) >=1 && strval($fecha) >=1 && $resultado)
@@ -50,6 +54,9 @@ if (isset($_POST['send_noticia'])){
         echo 'datosInvalidos()';
         echo '</script>';
 
+    }
+    else {
+        echo 'error';
     }
 } 
 

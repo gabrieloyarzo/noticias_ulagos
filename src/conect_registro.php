@@ -29,6 +29,7 @@ function entradasInvalidas(){
 
 #Conexion a la base de datos
 $conex = mysqli_connect("localhost","root","","noticias_ulagos");
+
 include('sanitizar.php');
 
 
@@ -38,6 +39,7 @@ $nombre = Limpieza(trim($_POST['nombre']));
 $apellido = Limpieza(trim($_POST['apellido']));
 $correo = Limpieza(trim($_POST['correo']));
 $password= Limpieza(trim($_POST['contra']));
+
 
 if (strval($nombre) >=1 && strval($apellido) >=1 && strval($correo) >=1 && strval($password) >=1 ){
     $dates = "INSERT INTO usuario (correo,nombre,apellido,contrasena) values('$correo','$nombre','$apellido','$password')";

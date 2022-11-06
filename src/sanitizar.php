@@ -1,6 +1,7 @@
 <?php
 
 
+
 function Limpieza($input){
     $caracter_negados = array(
         "?", "[", "]", "/", "\\", "=", "<", ">", ":", ";", ",", "'", "\"", "&",
@@ -15,6 +16,7 @@ function Limpieza($input){
     }
     return $input;
     
+
 } 
 
 ?>

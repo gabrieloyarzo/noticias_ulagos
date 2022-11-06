@@ -29,7 +29,7 @@ a {
 }
 
 .buscar {
-    background-color: #64c4ed;
+    background-color: rgb(100, 196, 237);
     padding: 0 20px;
     display: flex;
     align-items: center;

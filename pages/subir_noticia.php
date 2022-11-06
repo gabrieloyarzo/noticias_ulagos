@@ -44,8 +44,8 @@ $result = mysqli_query($conex,$date);
             <?php  } ?>
             </select>
         </div>
-        <input placeholder="correo" type="email" name="correo" id="noticia__correo">
-        <input placeholder="contrasena" type="password" name="contra" id="noticia__contra">
+        <input placeholder="correo" type="email" name="correo" class="noticia__correo">
+        <input placeholder="contrasena" type="password" name="contra" class="noticia__contra">
         <input type="submit" name="send_noticia" class="noticia__enviar" value="Subir Noticia">
     </form>
     <?php include('../src/conect_noticia.php'); ?>

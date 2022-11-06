@@ -21,10 +21,10 @@
     </a>
 </header>
     <form class="inicio_sesion" method="post">
-        <input class="usuario" name="nombre" type="text" placeholder="Nombre">
-        <input class="usuario" name="apellido" type="text" placeholder="Apellido">
-        <input class="correo" name="correo" type="email" placeholder="Correo">
-        <input class="contrasena" name="contra" type="password" placeholder="Contraseña">
+        <input required class="usuario" name="nombre" type="text" placeholder="Nombre">
+        <input required class="usuario" name="apellido" type="text" placeholder="Apellido">
+        <input required class="correo" name="correo" type="email" placeholder="Correo">
+        <input required class="contrasena" name="contra" type="password" placeholder="Contraseña">
         <div>
             <input class="registrarse" name="send_registro" type="submit" value="Registrarse">
         </div>

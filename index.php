@@ -86,7 +86,7 @@
             </main>
             
             <!--En proceso-->
-            <button class="noticia__ir" id=<?php echo $varID.'button';?>>Mostar más</button>
+            <button class="noticia__ir" id=<?php echo $varID.'button';?>>Mostrar más</button>
         
         </article>
          

@@ -22,6 +22,7 @@
         <title>Noticias ULAGOS</title>
         <link rel="stylesheet" href="./styles/index.css">
         <script defer src="./src/filtros.js"></script>
+        <script defer src="./src/read_more.js"></script>
 </head>
 <body>
     
@@ -50,8 +51,10 @@
             <?php  } ?>
         </select>
     </nav>
-    
+
+    <?php $varID = 0?>
     <?php while ($fila=mysqli_fetch_array($resultado_noticia)) { ?>
+        
         <article class="noticia">
             <aside class="noticia__aside">
                 <h3 class="noticia__nombre"><?php echo $fila['nombre']?></h3>
@@ -64,14 +67,20 @@
                     <p class="noticia__fecha"><?php echo $fila['fecha']?></p>
                     <p class="noticia__categoria" style="background-color: <?php echo $fila['color']?>"><?php echo $fila['categoria']?></p>
                 </header>
-                <footer class="noticia__footer">
 
-                    <p class="noticia__texto"><?php echo $fila['info']?></p>
+                <footer class="noticia__footer" id=<?php echo $varID;?>>
+
+                    <!-- En proceso -->                    
+                    <p><?php echo $fila['info']?></p>  
                 </footer>
             </main>
-            <button class="noticia__ir">Ir a la noticia</button>
-        </article> 
-        <?php } ?>
+            
+            <!--En proceso-->
+            <button class="noticia__ir" id=<?php echo $varID.'button';?>>Ir a la noticia</button>
+        
+        </article>
+         
+        <?php $varID = $varID+1; } ?>
         
     </body>
     </html>

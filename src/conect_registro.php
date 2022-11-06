@@ -1,4 +1,24 @@
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script language= javascript type= text/javascript>
+function error(){
+ swal({
+    title: 'Error',
+    text:'El correo ingresado ya se encuentra en uso',
+    icon:'error'
+})
+}
+function bienvenido(){
+swal({
+   title:'Bienvenido!',
+   icon:'success'
+})
+}
+</script> 
+
+
 <?php
+
 #Conexion a la base de datos
 $conex = mysqli_connect("localhost","root","","noticias_ulagos");
 
@@ -16,13 +36,17 @@ if (strval($nombre) >=1 && strval($apellido) >=1 && strval($correo) >=1 && strva
     
     try {
         $result = mysqli_query($conex,$dates);
+        echo '<script>';
+        echo 'bienvenido()';
+        echo '</script>';
     } catch(Exception $e) {
         
-    echo "Correo en uso, si está usted resgitrado puede iniciar sesión";
+   echo '<script>';
+   echo 'error()';
+   echo '</script>';
+   
 
-}
-
-
-}
+    }
+} 
 }
 ?>

@@ -1,4 +1,3 @@
-
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script language= javascript type= text/javascript>
 function datosInvalidos(){

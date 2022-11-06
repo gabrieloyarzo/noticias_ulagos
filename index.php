@@ -21,6 +21,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Noticias ULAGOS</title>
         <link rel="stylesheet" href="./styles/index.css">
+        <link rel="shortcut icon" href="./img/logo-universidad-de-los-lagos.webp" type="image/x-icon">
         <script defer src="./src/filtros.js"></script>
         <script defer src="./src/ocultar.js"></script>
 </head>
@@ -40,18 +41,26 @@
 </header>
     
     <nav class="buscar">
-    <p class="buscar__indice">Titulo:</p>
-        <input name="titulo" id="buscar__titulo" cols="30" rows="1"></input>
-        <p class="buscar__indice">Desde:</p>
-        <input id="buscar__fecha--menor" type="date">
-        <p class="buscar__indice">Hasta:</p>
-        <input id="buscar__fecha--mayor" type="date">
-        <p class="buscar__indice">Categoria:</p>
-        <select name="categoria" id="buscar__categoria">
-            <?php while ($fila=mysqli_fetch_array($resultado_categoria)){  ?>
-                <option style="background-color: <?php echo $fila[1] ?>" value="<?php echo $fila[0] ?>"><?php echo $fila[0] ?></option>
-            <?php  } ?>
-        </select>
+        <div class="buscar__filtro">
+            <label for="titulo" class="buscar__indice">Titulo:</label>
+            <input name="titulo" id="buscar__titulo" cols="30" rows="1"></input>
+        </div>
+        <div class="buscar__filtro">
+            <label for="fecha-menor" class="buscar__indice">Desde:</label>
+            <input name="fecha-menor" id="buscar__fecha--menor" type="date">
+        </div>
+        <div class="buscar__filtro">
+            <label for="fecha-mayor" class="buscar__indice">Hasta:</label>
+            <input name="fecha-mayor" id="buscar__fecha--mayor" type="date">
+        </div>
+        <div class="buscar__filtro">
+            <label for="categoria" class="buscar__indice">Categoria:</label>
+            <select name="categoria" id="buscar__categoria">
+                <?php while ($fila=mysqli_fetch_array($resultado_categoria)){  ?>
+                    <option style="background-color: <?php echo $fila[1] ?>" value="<?php echo $fila[0] ?>"><?php echo $fila[0] ?></option>
+                <?php  } ?>
+            </select>
+        </div>
     </nav>
 
     <?php $varID = 0?>

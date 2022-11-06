@@ -22,40 +22,45 @@
         <title>Noticias ULAGOS</title>
         <link rel="stylesheet" href="./styles/index.css">
         <script defer src="./src/filtros.js"></script>
+        <script defer src="./src/ocultar.js"></script>
 </head>
 <body>
     
 <header class="header">
-    <img class="header__logo" witdh="50" heigth="50" src="./img/logo-universidad-de-los-lagos.webp" alt="logo Ulagos">
+    <img class="header__logo" witdh="50" heigth="50" src="./img/home.png" alt="logo Ulagos">
     <a href="./index.php" class="header__home">
         <img class="header__titulo" src="./img/noticias-ulagos.jpeg" alt="Noticias ULagos">
     </a>
     <a href="./pages/subir_noticia.php" class="header__noticia">
         <img class="header__add" src="./img/add_cicle.png" alt="Subir Noticia">
     </a>
-    <a href="./pages/registrarse.php" class="header__login">
+   <a href="./pages/registrarse.php" class="header__login">
         <img class="header__person" src="./img/person.png" alt="login">
-    </a>
+    </a> 
+
 </header>
     
     <nav class="buscar">
+    <p class="buscar__indice">Titulo:</p>
         <input name="titulo" id="buscar__titulo" cols="30" rows="1"></input>
-        <p class="buscar__indice">desde:</p>
+        <p class="buscar__indice">Desde:</p>
         <input id="buscar__fecha--menor" type="date">
-        <p class="buscar__indice">hasta:</p>
+        <p class="buscar__indice">Hasta:</p>
         <input id="buscar__fecha--mayor" type="date">
+        <p class="buscar__indice">Categoria:</p>
         <select name="categoria" id="buscar__categoria">
             <?php while ($fila=mysqli_fetch_array($resultado_categoria)){  ?>
                 <option style="background-color: <?php echo $fila[1] ?>" value="<?php echo $fila[0] ?>"><?php echo $fila[0] ?></option>
             <?php  } ?>
         </select>
     </nav>
-    
+
+    <?php $varID = 0?>
     <?php while ($fila=mysqli_fetch_array($resultado_noticia)) { ?>
+        
         <article class="noticia">
             <aside class="noticia__aside">
-                <h3 class="noticia__nombre"><?php echo $fila['nombre']?></h3>
-                <h3 class="noticia__apellido"><?php echo $fila['apellido']?></h3>
+                <h3 class="noticia__nombre"><?php echo $fila['nombre']?> <?php echo $fila['apellido']?></h3>
                 <h3 class="noticia__correo"><?php echo $fila['correo']?></h3>
             </aside>
             <main class="noticia__main">
@@ -64,14 +69,20 @@
                     <p class="noticia__fecha"><?php echo $fila['fecha']?></p>
                     <p class="noticia__categoria" style="background-color: <?php echo $fila['color']?>"><?php echo $fila['categoria']?></p>
                 </header>
-                <footer class="noticia__footer">
 
-                    <p class="noticia__texto"><?php echo $fila['info']?></p>
+                <footer class="noticia__footer" id=<?php echo $varID;?>>
+
+                    <!-- En proceso -->                    
+                    <p><?php echo $fila['info']?></p>  
                 </footer>
             </main>
-            <button class="noticia__ir">Ir a la noticia</button>
-        </article> 
-        <?php } ?>
+            
+            <!--En proceso-->
+            <button class="noticia__ir" id=<?php echo $varID.'button';?>>Mostar más</button>
+        
+        </article>
+         
+        <?php $varID = $varID+1; } ?>
         
     </body>
     </html>

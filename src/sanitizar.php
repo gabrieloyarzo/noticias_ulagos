@@ -1,16 +1,22 @@
 <?php
-function clean_input($input){
-    $forbidden_chars = array(
+
+
+
+function Limpieza($input){
+    $caracter_negados = array(
         "?", "[", "]", "/", "\\", "=", "<", ">", ":", ";", ",", "'", "\"", "&",
         "$", "#", "*", "(", ")" , "|", "~", "`", "!", "{", "}", "%", "+");
-    
-    for ($i=0;  $i < count($forbidden_chars) ; $i++){
-        if (strpos($input, $forbidden_chars[$i]) == true){
-            return false;
-        } 
-    }
+        
+    for ($i=0;  $i < count($caracter_negados) ; $i++){
 
+        if (strpos($input, $caracter_negados[$i]) !== false){
+            return false;
+
+        }
+    }
     return $input;
+    
+
 } 
 
 ?>

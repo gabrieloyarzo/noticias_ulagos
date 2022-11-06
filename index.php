@@ -22,12 +22,12 @@
         <title>Noticias ULAGOS</title>
         <link rel="stylesheet" href="./styles/index.css">
         <script defer src="./src/filtros.js"></script>
-        <script defer src="./src/read_more.js"></script>
+        <script defer src="./src/ocultar.js"></script>
 </head>
 <body>
     
 <header class="header">
-    <img class="header__logo" witdh="50" heigth="50" src="./img/logo-universidad-de-los-lagos.webp" alt="logo Ulagos">
+    <img class="header__logo" witdh="50" heigth="50" src="./img/home.png" alt="logo Ulagos">
     <a href="./index.php" class="header__home">
         <img class="header__titulo" src="./img/noticias-ulagos.jpeg" alt="Noticias ULagos">
     </a>
@@ -41,11 +41,13 @@
 </header>
     
     <nav class="buscar">
+    <p class="buscar__indice">Titulo:</p>
         <input name="titulo" id="buscar__titulo" cols="30" rows="1"></input>
-        <p class="buscar__indice">desde:</p>
+        <p class="buscar__indice">Desde:</p>
         <input id="buscar__fecha--menor" type="date">
-        <p class="buscar__indice">hasta:</p>
+        <p class="buscar__indice">Hasta:</p>
         <input id="buscar__fecha--mayor" type="date">
+        <p class="buscar__indice">Categoria:</p>
         <select name="categoria" id="buscar__categoria">
             <?php while ($fila=mysqli_fetch_array($resultado_categoria)){  ?>
                 <option style="background-color: <?php echo $fila[1] ?>" value="<?php echo $fila[0] ?>"><?php echo $fila[0] ?></option>
@@ -58,8 +60,7 @@
         
         <article class="noticia">
             <aside class="noticia__aside">
-                <h3 class="noticia__nombre"><?php echo $fila['nombre']?></h3>
-                <h3 class="noticia__apellido"><?php echo $fila['apellido']?></h3>
+                <h3 class="noticia__nombre"><?php echo $fila['nombre']?> <?php echo $fila['apellido']?></h3>
                 <h3 class="noticia__correo"><?php echo $fila['correo']?></h3>
             </aside>
             <main class="noticia__main">
@@ -77,7 +78,7 @@
             </main>
             
             <!--En proceso-->
-            <button class="noticia__ir" id=<?php echo $varID.'button';?>>Ir a la noticia</button>
+            <button class="noticia__ir" id=<?php echo $varID.'button';?>>Mostar más</button>
         
         </article>
          

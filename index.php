@@ -75,7 +75,7 @@
                 <header class="noticia__header">
                     <h2 class="noticia__titulo"><?php echo $fila['titulo']?></h2>
                     <p class="noticia__fecha"><?php echo $fila['fecha']?></p>
-                    <p class="noticia__categoria" style="background-color: <?php echo $fila['color']?>"><?php echo $fila['categoria']?></p>
+                    <p class="noticia__categoria" style="background-color: <?php echo $fila['color']?>;text-transform: capitalize;"><?php echo $fila['categoria']?></p>
                 </header>
 
                 <footer class="noticia__footer" id=<?php echo $varID;?>>

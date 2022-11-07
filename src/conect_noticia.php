@@ -39,8 +39,7 @@ if (isset($_POST['send_noticia'])){
 
     
 
-    if (strval($titulo) >=1 && strval($contenido) >=1 && strval($categoria) >=1 && strval($fecha) >=1 && $resultado)
-    {
+    if (strval($titulo) >=1 && strval($contenido) >=1 && strval($categoria) >=1 && strval($fecha) >=1 && $resultado){
        
 
         $dates = "INSERT INTO noticia (titulo,fecha,descripcion,correo,nombrec) values('$titulo','$fecha','$contenido','$correo','$categoria')";
@@ -54,9 +53,6 @@ if (isset($_POST['send_noticia'])){
         echo 'datosInvalidos()';
         echo '</script>';
 
-    }
-    else {
-        echo 'error';
     }
 } 
 

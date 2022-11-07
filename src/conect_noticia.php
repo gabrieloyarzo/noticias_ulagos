@@ -27,8 +27,8 @@ include('sanitizar.php');
 if (isset($_POST['send_noticia'])){     
 
     #$titulo    = strval(trim($_POST['titleN']));
-    $titulo    = Limpieza(trim($_POST['titleN']));
-    $contenido = Limpieza(trim($_POST['contenido']));
+    $titulo    = trim($_POST['titleN']);
+    $contenido = trim($_POST['contenido']);
     $fecha     = Limpieza(trim($_POST['date']));
     $categoria = Limpieza(trim($_POST['tipos']));
     $correo    = Limpieza(trim($_POST['correo']));
